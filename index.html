@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Data COVID-19 Global</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="result">
+  <h1>Data COVID-19 Global</h1>
+  <p>Total Kasus: <span id="total-cases"></span></p>
+  <p>Total Kematian: <span id="total-deaths"></span></p>
+  <p>Total Kesembuhan: <span id="total-recovered"></span></p>
+</div>
+  <script>
+    // mengambil data dari API publik
+    $.getJSON('https://disease.sh/v3/covid-19/all', function(data) {
+      // menampilkan data pada halaman HTML
+      $('#total-cases').text(data.cases.toLocaleString());
+      $('#total-deaths').text(data.deaths.toLocaleString());
+      $('#total-recovered').text(data.recovered.toLocaleString());
+    });
+  </script>
+</body>
+</html>

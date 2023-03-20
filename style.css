@@ -1,0 +1,22 @@
+html {
+    padding: 50px;
+}
+
+#result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:  #8889cc;
+    border: 2px solid #ff66bc;
+    border-radius: 50px;
+    box-shadow: -8px 11px 13px -7px rgba(0,0,0,0.75);
+    text-align: center;
+    width: 300px;
+    height: auto;
+}
+#result p {
+    color: black;
+    font-size: 20px;
+    font-weight: 300px;
+}
